@@ -32,7 +32,6 @@ def get_tasks():
 
 @app.route("/register", methods=["GET", "POST"])
 def register():
-    # always start by building the funtionality for the GET method
     return render_template("register.html")
 
 
