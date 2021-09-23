@@ -6,11 +6,11 @@ name = "pypi"
 [packages]
 flask = "*"
 dnspython = "*"
-pymongo = "*"
 pep8 = "*"
 autopep8 = "*"
 pylint = "*"
 pylint-flask = "*"
+flask-pymongo = "*"
 
 [dev-packages]
 
