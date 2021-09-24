@@ -12,6 +12,7 @@ pylint = "*"
 pylint-flask = "*"
 flask-pymongo = "*"
 pycodestyle = "*"
+jinjalint = "*"
 
 [dev-packages]
 
