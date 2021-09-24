@@ -11,6 +11,7 @@ autopep8 = "*"
 pylint = "*"
 pylint-flask = "*"
 flask-pymongo = "*"
+pycodestyle = "*"
 
 [dev-packages]
 
