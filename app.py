@@ -129,6 +129,19 @@ def add_task():
 
 @app.route("/edit_task/<task_id>", methods=["GET", "POST"])
 def edit_task(task_id):
+    if request.method == "POST":
+        is_urgent = "on" if request.form.get("is_urgent") else "off"
+        submit = {
+            "category_name": request.form.get("category_name"),
+            "task_name": request.form.get("task_name"),
+            "task_description": request.form.get("task_description"),
+            "is_urgent": is_urgent,
+            "due_date": request.form.get("due_date"),
+            "created_by": session["user"].capitalize()
+        }
+        mongo.db.tasks.update({"_id":ObjectId(task_id)},submit)
+        flash("Task Successfully Updated")
+
     # retrieve the task from the db by targeting it's ID
     task = mongo.db.tasks.find_one({"_id": ObjectId(task_id)})
 
